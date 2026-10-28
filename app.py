@@ -1,14 +1,22 @@
-#Adding this comment to check the linter build
-# Flask app
+
+"""Flask application with a home page and health-check endpoint."""
+
 from flask import Flask, render_template
+
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
-    return render_template('index.html')
+    """Render the home page."""
+    return render_template("index.html")
 
 
-@app.route('/health')
+@app.route("/health")
 def health():
-    return 'Server is up and running'
+    """Return the application health status."""
+    return "Server is up and running"
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=False)
