@@ -12,3 +12,5 @@ jobs:
         uses: actions/checkout@v7 # Also can use git clone githuburl
       - name: Install Linter
         run: pip install ruff
+      - name: Check the files for linting
+        run: ruff check .
