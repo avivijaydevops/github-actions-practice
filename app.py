@@ -11,9 +11,6 @@ def hello_world():
     """Render the home page."""
     return render_template("index.html")
 
-if ee:
-    fe
-
 
 @app.route("/health")
 def health():
